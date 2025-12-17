@@ -1,0 +1,120 @@
+:root {
+    --apple-red: #ff3b30;
+    --apple-blue: #007aff;
+    --glass: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body.apple-dark {
+    background: radial-gradient(circle at center, #1e293b, #020617);
+    color: #fff;
+    font-family: -apple-system, system-ui, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* القائمة العلوية */
+.glass-nav {
+    margin-top: 30px;
+    background: var(--glass);
+    backdrop-filter: blur(25px);
+    padding: 12px 30px;
+    border-radius: 100px;
+    border: 1px solid var(--glass-border);
+    display: flex;
+    gap: 20px;
+}
+
+.glass-nav a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.glass-nav a.active { color: #fff; }
+
+/* الكيبورد 3D */
+.scene { perspective: 2000px; margin-top: 40px; }
+.keyboard-container { transform-style: preserve-3d; transition: transform 0.1s; }
+
+.apple-keyboard {
+    display: grid;
+    grid-template-columns: repeat(30, 25px);
+    gap: 8px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+}
+
+.key {
+    grid-column: span 2;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 0 rgba(0,0,0,0.3);
+    transition: 0.1s;
+}
+
+.key.active {
+    background: var(--apple-red) !important;
+    transform: translateZ(-5px) translateY(4px);
+    box-shadow: 0 0px 0 rgba(0,0,0,0.3);
+}
+
+/* البطاقات الزجاجية */
+.container { width: 100%; max-width: 850px; margin-top: 50px; padding: 0 20px; }
+
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(40px);
+    padding: 35px;
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+    text-align: center;
+}
+
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+
+.display-area {
+    background: rgba(0,0,0,0.3);
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea, input {
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--glass-border);
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 1.2rem;
+    outline: none;
+    text-align: center;
+    resize: none;
+}
+
+.stats-container { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; }
+.stat-box { background: var(--glass); padding: 12px 30px; border-radius: 15px; border: 1px solid var(--glass-border); font-weight: 600; }
+
+.reset-btn { margin-top: 20px; background: transparent; border: 1px solid var(--apple-blue); color: var(--apple-blue); padding: 8px 20px; border-radius: 10px; cursor: pointer; }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iKey Pro - Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="apple-dark">
+    <nav class="glass-nav">
+        <a href="index.html">Tester</a>
+        <a href="learning.html" class="active">Learning</a>
+        <a href="typing-test.html">Speed Test</a>
+    </nav>
+
+    <div class="container">
+        <div class="glass-card">
+            <div class="card-header">
+                <select id="lang-select">
+                    <option value="en">English Protocol</option>
+                    <option value="ar">البروتوكول العربي</option>
+                </select>
+                <div class="accuracy-badge">Accuracy: <span id="acc-val">100</span>%</div>
+            </div>
+            <div id="text-target" class="display-area">Loading lesson...</div>
+            <textarea id="learn-input" placeholder="Start typing the text above..."></textarea>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

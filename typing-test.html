@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iKey Pro - Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="apple-dark">
+    <nav class="glass-nav">
+        <a href="index.html">Tester</a>
+        <a href="learning.html">Learning</a>
+        <a href="typing-test.html" class="active">Speed Test</a>
+    </nav>
+
+    <div class="container">
+        <div class="stats-container">
+            <div class="stat-box">WPM: <span id="wpm-val">0</span></div>
+            <div class="stat-box">Time: <span id="timer-val">60</span>s</div>
+        </div>
+        <div class="glass-card">
+            <div id="words-display" class="display-area">The digital frontier is ready for your input</div>
+            <input type="text" id="speed-input" placeholder="Type here to start race...">
+            <button class="reset-btn" onclick="location.reload()">Reset Test</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
